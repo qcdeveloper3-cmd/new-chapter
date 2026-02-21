@@ -1,0 +1,26 @@
+paths:
+  artifacts_dir: artifacts
+  logs_dir: artifacts/logs
+  debug_dir: artifacts/debug
+
+analysis:
+  primary_engine: docling
+  fallback_engine: hybrid_ocr
+  enable_fallback_ocr: true
+  language_hints:
+    - fa
+    - en
+
+render:
+  target_dpi: 300
+  preserve_geometry: true
+  rtl_default: true
+  enable_mixed_direction_runs: true
+  font_preferences:
+    fa: B Nazanin
+    en: Calibri
+
+validation:
+  enable_visual_diff: true
+  max_text_distance_ratio: 0.02
+  max_bbox_shift_px: 4

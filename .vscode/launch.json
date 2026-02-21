@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "DocMirror: CLI Help",
+      "type": "python",
+      "request": "launch",
+      "module": "docmirror",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": ["--help"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "DocMirror: Run All (sample)",
+      "type": "python",
+      "request": "launch",
+      "module": "docmirror",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": [
+        "run-all",
+        "Screenshot 2026-02-21 043000.jpg",
+        "-o",
+        "out"
+      ],
+      "console": "integratedTerminal"
+    }
+  ]
+}

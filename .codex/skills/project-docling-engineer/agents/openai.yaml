@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Docling Engineer"
+  short_description: "Build and maintain robust Python Docling document pipelines"
+  default_prompt: "Use this skill to plan and implement production-grade Python and Docling document processing workflows."

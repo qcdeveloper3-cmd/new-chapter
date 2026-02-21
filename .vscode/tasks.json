@@ -1,0 +1,54 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "bootstrap-dev",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/bootstrap_dev.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "lint",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\python -m ruff check src tests",
+      "problemMatcher": []
+    },
+    {
+      "label": "format-check",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\python -m ruff format --check src tests",
+      "problemMatcher": []
+    },
+    {
+      "label": "test-pytest",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\python -m pytest",
+      "problemMatcher": []
+    },
+    {
+      "label": "test-unittest",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\python -m unittest tests.test_cli_unittest -v",
+      "problemMatcher": []
+    },
+    {
+      "label": "cli-help",
+      "type": "shell",
+      "command": "$env:PYTHONPATH='src'; .\\.venv\\Scripts\\python -m docmirror --help",
+      "problemMatcher": []
+    },
+    {
+      "label": "run-all-sample",
+      "type": "shell",
+      "command": "$env:PYTHONPATH='src'; .\\.venv\\Scripts\\python -m docmirror run-all \"Screenshot 2026-02-21 043000.jpg\" -o out",
+      "problemMatcher": []
+    }
+  ]
+}

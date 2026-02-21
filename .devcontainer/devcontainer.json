@@ -1,0 +1,21 @@
+{
+  "name": "docmirror-dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.vscode-python-envs",
+        "charliermarsh.ruff",
+        "github.vscode-github-actions"
+      ]
+    }
+  },
+  "postCreateCommand": "python -m pip install --upgrade pip && python -m pip install -e .[dev] && python scripts/install_repo_skills.py --force && pre-commit install"
+}

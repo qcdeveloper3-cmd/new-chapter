@@ -1,0 +1,17 @@
+paths:
+  artifacts_dir: artifacts
+  logs_dir: artifacts/logs
+  debug_dir: artifacts/debug
+
+analysis:
+  primary_engine: docling
+  fallback_engine: hybrid_ocr
+  enable_fallback_ocr: true
+
+render:
+  target_dpi: 300
+  preserve_geometry: true
+  rtl_default: true
+
+validation:
+  enable_visual_diff: true
